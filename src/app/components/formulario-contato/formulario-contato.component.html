@@ -1,0 +1,50 @@
+<h2>Cadastrar contato</h2>
+
+<form (ngSubmit)="adicionarContato()">
+  <div class="campo">
+    <label for="nome">Nome</label>
+
+    <input
+      id="nome"
+      name="nome"
+      type="text"
+      placeholder="Digite o nome"
+      [(ngModel)]="nome">
+  </div>
+
+  <div class="campo">
+    <label for="telefone">Telefone</label>
+
+    <input
+      id="telefone"
+      name="telefone"
+      type="text"
+      placeholder="Digite o telefone"
+      [(ngModel)]="telefone">
+  </div>
+
+  <div class="campo">
+    <label for="email">E-mail</label>
+
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="Digite o e-mail"
+      [(ngModel)]="email">
+  </div>
+
+  <div class="botoes">
+    <button
+      type="submit"
+      [disabled]="formularioInvalido">
+      Adicionar
+    </button>
+
+    <button
+      type="button"
+      (click)="limparCampos()">
+      Limpar
+    </button>
+  </div>
+</form>

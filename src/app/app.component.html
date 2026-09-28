@@ -1,0 +1,15 @@
+<h1>{{ titulo }}</h1>
+
+<p>{{ descricao }}</p>
+
+<p>Total de contatos: {{ contatos.length }}</p>
+
+<app-formulario-contato
+  (contatoAdicionado)="adicionarContato($event)">
+</app-formulario-contato>
+
+<app-lista-contatos
+  [contatos]="contatos"
+  (favoritoAlterado)="alterarFavorito($event)"
+  (contatoRemovido)="removerContato($event)">
+</app-lista-contatos>

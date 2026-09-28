@@ -1,0 +1,50 @@
+<h2>Lista de contatos</h2>
+
+<p
+  class="lista-vazia"
+  *ngIf="contatos.length === 0">
+  Nenhum contato cadastrado.
+</p>
+
+<ul
+  class="lista"
+  *ngIf="contatos.length > 0">
+
+  <li
+    class="contato"
+    [class.favorito]="contato.favorito"
+    *ngFor="let contato of contatos">
+
+    <h3>{{ contato.nome }}</h3>
+
+    <p>
+      Telefone: {{ contato.telefone }}
+    </p>
+
+    <p>
+      E-mail: {{ contato.email }}
+    </p>
+
+    <p *ngIf="contato.favorito">
+      ★ Contato favorito
+    </p>
+
+    <p *ngIf="!contato.favorito">
+      Contato comum
+    </p>
+
+    <div class="acoes">
+      <button
+        type="button"
+        (click)="alterarFavorito(contato.id)">
+        {{ contato.favorito ? 'Desfavoritar' : 'Favoritar' }}
+      </button>
+
+      <button
+        type="button"
+        (click)="removerContato(contato.id)">
+        Remover
+      </button>
+    </div>
+  </li>
+</ul>

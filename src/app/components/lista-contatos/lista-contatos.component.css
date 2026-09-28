@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.lista {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  list-style: none;
+}
+
+.contato {
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-left: 5px solid #9ca3af;
+  border-radius: 8px;
+}
+
+.contato.favorito {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.contato h3 {
+  margin-top: 0;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lista-vazia {
+  padding: 24px;
+  color: #6b7280;
+  text-align: center;
+}
